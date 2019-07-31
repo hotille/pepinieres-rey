@@ -1,0 +1,311 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Pepinieres Rey{% endblock %}
+
+{% block body %}
+<header class="container px-0" id="homeHeader">
+
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #436256;">
+        <a class="navbar-brand" href="#"><img src="img/logo-rey.png" alt="image logo" class="toplogo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Accueil<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#products">Nos produits</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#info">Historique</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Démarche</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact-form">Contact</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Liens
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownAW">
+                        <a class="dropdown-item" href="http://www.pepinieres-rey.com/accueil.html" target="blank">Autre
+                            site</a>
+                        <a class="dropdown-item" href="http://www.pepinieres-rey.com/nos-conseils/" target="blank">Nos
+                            conseils</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="http://www.pepinieres-rey.com/pages-pro/" target="blank">Pages
+                            pro</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Chercher" aria-label="Search">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Chercher</button>
+            </form>
+        </div>
+    </nav>
+
+</header>
+
+<section id="slider" class="container px-0 mb-4">
+
+    <div class="bd-example ">
+        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <figure style="background-image: url(img/1.jpg)" ;>
+
+                        <figlegend class="carousel-caption d-none d-md-block">
+                            Une large gamme de végétaux.
+                        </figlegend>
+                    </figure>
+                </div>
+                <div class="carousel-item">
+                    <figure style="background-image: url(img/3.jpg)" ;>
+
+                        <figlegend class="carousel-caption d-none d-md-block">
+                            1600 références variétales.
+                        </figlegend>
+                    </figure>
+                </div>
+                <div class="carousel-item">
+                    <figure style="background-image: url(img/2.jpg)" ;>
+
+                        <figlegend class="carousel-caption d-none d-md-block">
+                            Origine française.
+                        </figlegend>
+                    </figure>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+</section>
+
+<section id="products" class="products container">
+    <div class="container pt-5 pb-5">
+        <div class="row">
+            <div class="col-12 col-lg-4 text-center ">
+                <figure class="circle">
+                    <img src="img/garden3.jpg" alt="image production pleine terre">
+                </figure>
+                <h2>Notre production pleine terre</h2>
+                <p><a class="btn" href="#" role="button">Voir details »</a></p>
+            </div>
+
+            <div class="col-12 col-lg-4 text-center">
+                <figure class="circle">
+                    <img src="img/garden.jpg" alt="image production containers">
+                </figure>
+                <h2>Notre production en containers</h2>
+                <p><a class="btn" href="#" role="button">Voir details »</a></p>
+            </div>
+
+            <div class="col-12 col-lg-4 text-center">
+                <figure class="circle">
+                    <img src="img/garden2.jpg" alt="image démarche environnementale">
+                </figure>
+                <h2>Notre démarche environnementale </h2>
+                <p><a class="btn" href="#" role="button">Voir details »</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="info" class="container">
+    <div class="row">
+
+        <div class="jumbotron col-12 col-lg-12">
+            <div class="col-12 col-lg-12 text-center">
+                <img src="img/logo-fleur-de-france.png" alt="logo fleur de france" class="logof">
+                <img src="img/logo.png" alt="image logo" class="imglogo">
+                <img src="img/Plante-bleue.png" alt="logo plante bleue" class="logop">
+            </div>
+
+            <h2 class="text-center pt-3"> À propos de nous</h2>
+
+            <h3 class="py-3" style="color:#436256;"><i class="fas fa-leaf"></i> Historique :</h3>
+            <p>
+                Créées, en 1930 par Marcel Rey, les pépinières Rey sont situées dans le sud du Beaujolais,
+                à 25 km au nord de Lyon. Elles approvisionnent principalement la région Rhône-Alpes ainsi que
+                le grand quart nord-est de la France.<br><span>Une large gamme de végétaux</span>, principalement
+                <span>d’origine française</span>,
+                y est proposé, près de <span>1600 références variétales</span> sur leur catalogue appartenant à diverses
+                familles végétales : arbres, cépées, arbustes, conifères, grimpantes, rosiers paysagers, fruitiers.<br>
+                Afin de proposer des végétaux plus résistants aux facteurs extérieurs, l’entreprise cultive 90% de sa
+                production en hors-sol et en extérieur.
+            </p>
+            <hr class="my-4">
+            <h3 class="py-3" style="color: #436256;"><i class="fas fa-leaf"></i> Chiffres clés :</h3>
+            <p class="important"><span>Superficie :</span> 115 ha dont 105 ha de pleine terre et 10 ha de hors-sol (dont
+                1 ha de serres).<br>
+                <span>Production pleine terre :</span> 8 000 arbres tiges contreplantés/an, 3 000 cépées
+                contreplantées/an 500 conifères/an.<br>
+                <span>Production hors-sol :</span> 400 000 conteneurs rempotés/an.<br>
+                <span>Employés :</span> 45 ETP soit 40 employés permanents, 12 saisonniers, 2 apprentis et environ 10
+                stagiaires répartis sur l’année.<br>
+                <span>Clientèle :</span> 64% d’entreprises de parcs et jardins, 15% de collectivités, 9% d’export, 12%
+                détail.<br>
+                <span>Chiffre d’affaire :</span> 4 000 000 €/an.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section id="photos" class="photos container"></section>
+
+
+<footer>
+    <section id="contact" class="container px-0 pt-5">
+        <div class="row">
+
+            <!-- contact info -->
+
+            <div class="col-12 col-lg-12 text-center text-lg-center my-0">
+                <img src="img/on-recrute.png" alt="on recrute" class="logorec">
+                <h2><img src="img/jardinier.png" alt="image logo" class="jrdlogo">Nous contacter</h2><br>
+            </div>
+            <div class="col-lg-6 contact-info text-center text-lg-left pb-2">
+
+                <div id="mapid"></div><br>
+
+
+                <p><span><i class="fas fa-map-marker-alt pr-2" style="font-size: 1.5em"></i></span>Pépinières Rey 2050
+                    route des Chères 69480 MORANCE</p>
+                <p><span>Horaies d'ouverture :</span><br>
+                    Du lundi au samedi, 8h30-12h / 13h30-18h.</p>
+                <a class="mailto" href="mailto:contact@pepinieres-rey.com?Subject=Contact"><span><i
+                            class="far fa-envelope pr-2"
+                            style="font-size: 1.5em"></i></span>contact@pepinieres-rey.com</a><br>
+                <a class="tel" href="tel:+33478473528"> <span><i class="fas fa-tty pr-2"
+                            style="font-size: 1.5em"></i></span>+334 78 47 35 28</a><br>
+                <a href="fax:+334 78 47 35 54"> <span><i class="fas fa-fax pr-2"
+                            style="font-size: 1.5em"></i></span>+334 78 47 35 54</a><br><br>
+                <a class="social"
+                    href="https://www.facebook.com/pepinieresrey/?eid=ARDll2wx1LqKX2pljGAOsWjtcP-YuMXMRGFihoJBnD9JdmRsnjo_3HEUoIDUwYRL5bGTNDS0EpGPbbHC"
+                    target="blank"> <span><i class="fab fa-facebook-square pr-2"
+                            style="font-size: 1.5em"></i></span>N'hésitez pas à visiter et à liker notre page
+                    Facebook.</a>
+            </div>
+
+            <!-- contact form -->
+
+            <div class="col-lg-6 pt-3" id="backform">
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                        Vous êtes un particuler
+                    </label>
+                </div>
+                <div class="form-check pb-2">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                    <label class="form-check-label" for="defaultCheck2">
+                        Vous êtes un professionnel
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="siret-number">Numéro de Siret *</label>
+                    <input id="form_name" type="number" name="siret" class="form-control"
+                        placeholder="Numéro de Siret *" required="required" data-error="">
+                    <div class="help-block with-errors"></div>
+                </div>
+
+                <form id="contact-form" method="post" action="contact.php" role="form">
+
+                    <div class="messages"></div>
+
+                    <div class="controls">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_name">Prénom *</label>
+                                    <input id="form_name" type="text" name="name" class="form-control"
+                                        placeholder="Prénom *" required="required" data-error="">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_lastname">Nom *</label>
+                                    <input id="form_lastname" type="text" name="surname" class="form-control"
+                                        placeholder="Nom *" required="required" data-error="">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_email">Email *</label>
+                                    <input id="form_email" type="email" name="email" class="form-control"
+                                        placeholder="Votre email *" required="required" data-error="">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_need">Raison *</label>
+                                    <select id="form_need" name="need" class="form-control" required="required"
+                                        data-error="">
+                                        <option value="">Aide commande</option>
+                                        <option value="price">Aide prix</option>
+                                        <option value="product">Aide produit</option>
+                                        <option value="Other">Autre</option>
+                                    </select>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="form_message">Message *</label>
+                                    <textarea id="form_message" name="message" class="form-control"
+                                        placeholder="Message *" rows="4" required="required"
+                                        data-error="Merci d'écrire un message"></textarea>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <input type="submit" class="btn btn-send" value="Envoyer">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="text-muted">
+
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

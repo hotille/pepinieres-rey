@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Glossaire{% endblock %}
+
+{% block body %}
+    <h1>Edit Glossaire</h1>
+
+    {{ include('glossaire/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('glossaire_index') }}">back to list</a>
+
+    {{ include('glossaire/_delete_form.html.twig') }}
+{% endblock %}

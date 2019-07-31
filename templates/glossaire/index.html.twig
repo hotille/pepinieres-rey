@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Glossaire index{% endblock %}
+
+{% block body %}
+    <h1>Glossaire index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Nom_latin</th>
+                <th>Description</th>
+                <th>Photo</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for glossaire in glossaires %}
+            <tr>
+                <td>{{ glossaire.id }}</td>
+                <td>{{ glossaire.nom }}</td>
+                <td>{{ glossaire.nomLatin }}</td>
+                <td>{{ glossaire.description }}</td>
+                <td>{{ glossaire.photo }}</td>
+                <td>
+                    <a href="{{ path('glossaire_show', {'id': glossaire.id}) }}">show</a>
+                    <a href="{{ path('glossaire_edit', {'id': glossaire.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('glossaire_new') }}">Create new</a>
+{% endblock %}

@@ -1,0 +1,235 @@
+/* Général */
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Spectral:400,600&display=swap');
+
+body {
+	font-family: 'Poppins', sans-serif;
+	background-image: url('../img/background.png');
+	background-repeat: repeat;
+}
+
+hr {
+	background-color: #436256;
+}
+
+a {text-decoration: none;}
+
+a:hover {text-decoration: none;}
+
+p, a {
+	font-family: 'Spectral', serif;
+	font-size: 18px;
+}
+
+h2, h3 {
+	font-weight: 200;
+	font-family: 'Spectral', serif;
+}
+
+/* logo*/
+
+img {
+	width: 100%;
+	height: auto; 
+}
+
+/** page environnement*/
+/* Header */
+
+.logoenv {
+	width: 100%;
+	height: auto;
+}
+
+/* Header / Navbar */
+
+#homeHeader .btn:hover {
+	background-color: #BEDB39;
+	color: #436256;
+	border-color: #BEDB39;
+}
+
+.navbar {
+	font-family: 'Spectral', serif;
+}
+
+.toplogo {
+	height: 40px;
+	width: auto;
+}
+/* header produit */
+
+.logo{
+	width: 30%;
+	height: 15vh ;
+}
+
+/* Section Slider */
+
+#slider figure{
+	width: 100%;
+	height: 50vh;
+	background-position: center ;
+	background-size: cover;
+	
+}
+
+.carousel-caption {
+	font-size: 30px;
+	font-family: 'Spectral', serif;
+	font-weight: 600;
+}
+/* Section Products */
+
+#products {
+	background: #BEDB39;
+}
+
+#products h2{
+	color:  #436256;
+}
+
+.circle {
+	height: 200px;
+	width: 200px;
+	margin: auto;
+}
+
+.circle img {
+	border-radius: 50%;
+	
+}
+
+#products .btn {
+	background-color: #436256;
+	color: whitesmoke;
+}
+.eco {
+	font-weight: 400;
+}
+/* Section Info */
+
+span {
+	color: #436256;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.imglogo {
+	height: 70px;
+	width: auto;
+}
+
+#info h2 {
+	color: #436256;
+	font-weight: 400;
+}
+
+#info .jumbotron {
+	background-color: whitesmoke;
+}
+
+.logof {
+	height: 100px;
+	width: auto;
+	float: left;
+}
+
+.logop {
+	height: 100px;
+	width: auto;
+	float: right;
+}
+
+.logorec {
+	height: 150px;
+	width: auto;
+	float: right;
+}
+
+/* Section Contact */
+
+#mapid { height: 300px; }
+
+.btn-send {
+	background-color :#436256;
+	color: whitesmoke;
+	border-color: #436256;
+}
+
+#contact h2 {
+	color: #436256;
+}
+
+.fa-envelope, .fa-tty, .fa-fax, .fa-map-marker-alt {
+	color:#436256;
+}
+
+#contact a {
+	color: black;
+}
+
+a {
+	color: #436256;
+}
+
+.btn-send:hover {
+	color:  #436256;
+	background-color: #BEDB39;
+	border-color: #BEDB39;
+}
+
+.jrdlogo {
+	height: 90px;
+	width: auto;
+}
+
+.fa-sort-up {
+	float: right;
+}
+
+#backform {
+	background-color: whitesmoke;
+}
+
+/* PAGE PRODUIT*/
+
+/* header produit */
+
+.logo{
+	width: 30%;
+	height: 15vh;
+}
+
+.bg-navbar {
+	background-color: #436256!important;
+	color:white;
+}
+
+.asideproduit{
+	background-color: white;
+	color:black;
+}
+aside h1{
+	font-size: 4em;
+	color: #436256;
+}
+
+aside h3{
+	color: #F77B53;
+}
+
+.btnterre{
+	background-color:#436256; 
+	margin-top:50px;
+	margin-bottom: 50px;
+	color:white; 
+	
+}
+
+/*PAGE ENVIRONNEMENT*/
+
+/*logo label*/
+
+.grid-sizer, .grid-item { width: 20%; height: 20%; padding: 20px 20px 20px 20px;}
+.grid-sizer, .grid-item { display : inline-block;}

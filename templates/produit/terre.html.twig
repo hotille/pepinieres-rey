@@ -1,0 +1,296 @@
+{% extends "base.html.twig" %}
+    {% block body %}
+    <main>
+        <div class="container">
+            <div class="row ">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-navbar">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Acceuil</a>
+    
+                        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                                <li class="nav-item active">
+                                    <a class="nav-link"
+                                        href="http://www.pepinieres-rey.com/sites/rey/pages/medias/documents/Catalogues2016/catalogue-2016-2017-internet.pdf">Catalogue
+                                        Professionel<span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link"
+                                        href="http://www.pepinieres-rey.com/sites/rey/pages/medias/documents/Catalogues2016/guide-jardin-2016-17internet2.pdf">Catalogue
+                                        Particulier<span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link " href="http://www.pepinieres-rey.com/nos-conseils/">Conseil<span
+                                            class="sr-only">(current)</span></a>
+                                </li>
+                            </ul>
+                            <form class="form-inline my-2 my-lg-0">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Recherche"
+                                    aria-label="Search">
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Recherche</button>
+                            </form>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <figure>
+        <div class="container">
+            <div class="row">
+                <div class="col-4 text-center pt-4">
+                    <a href="#arbres" class="btn btn-primary btn-lg btnterre ">Arbres</a>
+                </div>
+                <div class="col-4 text-center pt-4">
+                    <a href="#arbustes" class="btn btn-primary btn-lg btnterre">Arbustes</a>
+                </div>
+                <div class="col-4 text-center pt-4">
+                    <a href="#coniferes" class="btn btn-primary btn-lg btnterre btnc">Conifères</a>
+                </div>
+            </div>
+        </div>
+    </figure>
+    
+    <aside>
+        <div class="container">
+            <div class="row">
+    
+                <div class="col-12 text-center">
+                    <h1 id="arbres">Arbres</h1><br>
+                    <h3>
+                        <center>Nos arbres contreplantés</center>
+                    </h3>
+                    <p>Chaque année nous mettons en culture 7500 arbres contreplantés dans près de 150 essences différentes.
+                        Après une culture
+                        de 3 à 4 ans, ils sont proposés en 16/18, 18/20, 20/25 ou plus selon les essences.</p>
+    
+                    <div class="row">
+                        <div class="col-3 pt-4">
+                            <div class="media">
+                                <img src="{{ asset('img/a.jpg') }}" class="mr-3" alt="...">
+                                <div class="media-body">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3 pt-4">
+                            <div class="media">
+                                <img src="{{ asset('img/b.jpg') }}" class="mr-3" alt="...">
+                                <div class="media-body">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3 pt-4">
+                            <div class="media">
+                                <img src="{{ asset('img/c.jpg') }}" class="mr-3" alt="...">
+                                <div class="media-body">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3 pt-4">
+                            <div class="media">
+                                <img src="{{ asset('img/d.jpg') }}" class="mr-3" alt="...">
+                                <div class="media-body">
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-12 text-center pt-5 ">
+                            <h3>
+                                <center>Nos arbres de première génération</center>
+                            </h3>
+                            <p>Chaque année nous plantons 25 000 arbres de première génération qui seront vendus en jeunes
+                                tiges du 200/250 au 14/16.</p>
+    
+                            <div class="row">
+                                <div class="col-3 pt-4">
+                                    <div class="media">
+                                        <img src="{{ asset('img/s.jpg') }}" class="mr-3" alt="...">
+                                        <div class="media-body">
+                                            <h5 class="mt-0"></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3 pt-4">
+                                    <div class="media">
+                                        <img src="{{ asset('img/q.jpg') }}" class="mr-3" alt="...">
+                                        <div class="media-body">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3 pt-4">
+                                    <div class="media">
+                                        <img src="{{ asset('img/o.jpg') }}" class="mr-3" alt="...">
+                                        <div class="media-body">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3 pt-4">
+                                    <div class="media">
+                                        <img src="{{ asset('img/r.jpg') }}" class="mr-3" alt="...">
+                                        <div class="media-body">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </aside>
+    <hr>
+    <aside>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center pt-5">
+    
+                    <h1 id="arbustes">Arbustes</h1><br>
+                    <h3>
+                        <center>Nos arbustes contreplantés</center>
+                    </h3>
+                    <p>La production d'arbustes contreplantés représente 250 touffes par an.</p>
+    
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="media">
+                                <img src="{{ asset('img/a9.jpg') }}" class="mr-3" alt="...">
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="media">
+                                <img src="{{ asset('img/a10.jpg') }}" class="mr-3" alt="...">
+                                <div class="media-body">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="media">
+                                <img src="{{ asset('img/a11.jpg') }}" class="mr-3" alt="...">
+                                <div class="media-body">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="media">
+                                <img src="{{ asset('img/a12.jpg') }}" class="mr-3" alt="...">
+                                <div class="media-body">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 text-center pt-5">
+    
+                            <h3>
+                                <center>Nos arbustes de première génération</center>
+                            </h3>
+                            <p>Nous plantons chaque année 50 000 arbustes de première génération.</p>
+                            <div class="row">
+                                <div class="col-3 pt-4">
+                                    <div class="media">
+                                        <img src="{{ asset('img/a5.jpg') }}" class="mr-3" alt="...">
+                                        <div class="media-body">
+                                            <h5 class="mt-0"></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3 pt-4">
+                                    <div class="media">
+                                        <img src="{{ asset('img/a6.jpg') }}" class="mr-3" alt="...">
+                                        <div class="media-body">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3 pt-4">
+                                    <div class="media">
+                                        <img src="{{ asset('img/a7.jpg') }}" class="mr-3" alt="...">
+                                        <div class="media-body">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3 pt-4">
+                                    <div class="media">
+                                        <img src="{{ asset('img/a8.jpg') }}" class="mr-3" alt="...">
+                                        <div class="media-body">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </aside>
+    <hr>
+    <aside>
+        <div class="container">
+            <div class="row">
+    
+                <div class="col-12 text-center pt-5">
+                    <h1 id="coniferes">Conifères</h1><br>
+                    <h3>
+                        <center>conifères contreplantés</center>
+                    </h3>
+                    <p>Chaque année nous contreplantons 1000 conifères.</p>
+    
+    
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="media">
+                                <img src="{{ asset('img/c1.jpg') }}" class="mr-3" alt="...">
+                                <div class="media-body">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="media">
+                                <img src="{{ asset('img/c2.jpg') }}" class="mr-3" alt="...">
+                                <div class="media-body">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="media">
+                                <img src="{{ asset('img/c3.jpg') }}" class="mr-3" alt="...">
+                                <div class="media-body">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="media">
+                                <img src="{{ asset('img/c4.jpg') }}" class="mr-3" alt="...">
+                                <div class="media-body">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 text-center pt-5">
+    
+                            <h3>
+                                <center>Nos conifères de première génération</center>
+                            </h3>
+                            <p>Chaque année nous produisons 25 000 conifères de première génération.</p>
+                            <div class="row">
+                                <div class="col-6 pt-4 px-5">
+                                    <div class="media">
+                                        <img src="{{ asset('img/c5.jpg') }}" class="mr-3" alt="...">
+                                        <div class="media-body">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 pt-4 px-5">
+                                    <div class="media">
+                                        <img src="{{ asset('img/c6.jpg') }}" class="mr-3" alt="...">
+                                        <div class="media-body">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </aside>
+
+    {% endblock %}

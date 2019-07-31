@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Glossaire{% endblock %}
+
+{% block body %}
+    <h1>Create new Glossaire</h1>
+
+    {{ include('glossaire/_form.html.twig') }}
+
+    <a href="{{ path('glossaire_index') }}">back to list</a>
+{% endblock %}
