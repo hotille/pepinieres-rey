@@ -10,7 +10,7 @@
                         aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Acceuil</a>
+                    <a class="navbar-brand" href="{{ url('index') }}">Acceuil</a>
     
                     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -44,9 +44,8 @@
     <section id="info" class="container">
         <div class="row">
 
-            <div class="jumbotron col-12 col-lg-12">
-                <i class="fas fa-leaf"></i>
-                <h2> Nos Pépinières hors-sol </h2>
+            <div class="jumbotron col-12 col-lg-12">  
+                <h2><i class="fas fa-leaf"></i> Nos Pépinières hors-sol </h2>
                 <p class="eco lead" style="color: #BEDB39;">
                     <p>Elles s'étendent sur 10 hectares d'un seul tenant.
                         Chaque année nous mettons en production 400 000 plantes en conteneurs, du C1,3L au C30L.
@@ -62,94 +61,111 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
-                    <h1>Notre production hors-sol</h1><br>
+                    <h1><center>Notre production hors-sol</center></h1><br>
                     <h3>
                         <center>Vues générales des cultures</center>
                     </h3>
 
                     <div class="row">
-                        <div class="col-3 pt-4">
+                        <div class="col-lg-3 col-md-3 col-sm-6 pt-4">
                             <div class="media">
                                 <img src="{{ asset('img/hs1.jpg') }}" class="mr-3" alt="...">
                                 <div class="media-body">
-                                    <h5 class="mt-0"></h5>
+                                    <h5>Vue côté Nord</h5>
                                 </div>
                             </div>
+                            <button type="button" class="btn btn-success mt-2">déscription</button>
                         </div>
-                        <div class="col-3 pt-4">
+                        <div class="col-lg-3 col-md-3 col-sm-6 pt-4">
                             <div class="media">
                                 <img src="{{ asset('img/hs2.jpg') }}" class="mr-3" alt="...">
                                 <div class="media-body">
+                                    <h5>Vue côté Sud</h5>
                                 </div>
                             </div>
+                            <button type="button" class="btn btn-success mt-2">déscription</button>
                         </div>
-                        <div class="col-3 pt-4">
+                        <div class="col-lg-3 col-md-3 col-sm-6 pt-4">
                             <div class="media">
                                 <img src="{{ asset('img/hs3.jpg') }}" class="mr-3" alt="...">
                                 <div class="media-body">
+                                    <h5>Planches de conifères</h5>
                                 </div>
                             </div>
+                            <button type="button" class="btn btn-success mt-2">déscription</button>
                         </div>
-                        <div class="col-3 pt-4">
+                        <div class="col-lg-3 col-md-3 col-sm-6 pt-4">
                             <div class="media">
                                 <img src="{{ asset('img/hs4.jpg') }}" class="mr-3" alt="...">
                                 <div class="media-body">
+                                    <h5>Planche d'arbustes</h5>
                                 </div>
                             </div>
+                            <button type="button" class="btn btn-success mt-2">déscription</button>
                         </div>
                         <div class="col-12 text-center pt-4">
                             <h3>
                                 <center>Cultures en extérieur</center>
                             </h3><br>
-
                             <div class="row">
-                                <div class="col-3 pt-4">
+                                <div class="col-lg-3 col-md-3 col-sm-6 pt-4">
                                     <div class="media">
                                         <img src="{{ asset('img/hs5.jpg') }}" class="mr-3" alt="...">
                                         <div class="media-body">
-                                            <h5 class="mt-0"></h5>
+                                            <h5>Planches de lavandes aprèsmise en culture</h5>
                                         </div>
                                     </div>
+                                    <button type="button" class="btn btn-success mt-2">déscription</button>
                                 </div>
-                                <div class="col-3 pt-4">
+                                <div class="col-lg-3 col-md-3 col-sm-6 pt-4">
                                     <div class="media">
                                         <img src="{{ asset('img/hs6.jpg') }}" class="mr-3" alt="...">
                                         <div class="media-body">
+                                            <h5>Planches de lavandes en fleurs</h5>
                                         </div>
                                     </div>
+                                    <button type="button" class="btn btn-success mt-2">déscription</button>
                                 </div>
-                                <div class="col-3 pt-4">
+                                <div class="col-lg-3 col-md-3 col-sm-6 pt-4">
                                     <div class="media">
                                         <img src="{{ asset('img/hs7.jpg') }}" class="mr-3" alt="...">
                                         <div class="media-body">
+                                            <h5>Planches de rosiers paysagers</h5>
                                         </div>
                                     </div>
+                                    <button type="button" class="btn btn-success mt-2">déscription</button>
                                 </div>
-                                <div class="col-3 pt-4">
+                                <div class="col-lg-3 col-md-3 col-sm-6 pt-4">
                                     <div class="media">
                                         <img src="{{ asset('img/hs8.jpg') }}" class="mr-3" alt="...">
                                         <div class="media-body">
+                                            <h5>Euonymus japonicus 'Emerald'n Gold' (Fusain du Japon)</h5>
                                         </div>
                                     </div>
+                                    <button type="button" class="btn btn-success mt-2">déscription</button>
                                 </div>
                                 <div class="col-12 text-center pt-4">
                                     <h3>
                                         <center>Cultures sous abri (Serres multichapelles)</center>
                                     </h3><br>
                                     <div class="row">
-                                        <div class="col-6 pt-6">
+                                        <div class="col-lg-3 col-md-3 col-sm-6 pt-4">
                                             <div class="media">
                                                 <img src="{{ asset('img/hs9.jpg') }}" class="mr-3" alt="...">
                                                 <div class="media-body">
+                                                    <h5>Cortaderia selloana (Herbe de la Pampa), Hebe sp. (Véronique) et Aucuba japonica (Aucuba du Japon)</h5>
                                                 </div>
                                             </div>
+                                            <button type="button" class="btn btn-success mt-2">déscription</button>
                                         </div>
-                                        <div class="col-6 pt-6">
+                                        <div class="col-lg-3 col-md-3 col-sm-6 pt-4">
                                             <div class="media">
                                                 <img src="{{ asset('img/hs10.jpg') }}" class="mr-3" alt="...">
                                                 <div class="media-body">
+                                                    <h5>Prunus laurocerasus 'Rotundifolia' (Laurier palme ou Laurier cerise)</h5>
                                                 </div>
                                             </div>
+                                            <button type="button" class="btn btn-success mt-2">déscription</button>
                                         </div>
                                     </div>
                                 </div>

@@ -10,7 +10,7 @@
                             aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        <a class="navbar-brand" href="#">Acceuil</a>
+                        <a class="navbar-brand" href="{{ url('index') }}">Acceuil</a>
     
                         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -58,6 +58,7 @@
     </figure>
     
     <aside>
+
         <div class="container">
             <div class="row">
     
@@ -71,33 +72,45 @@
                         de 3 à 4 ans, ils sont proposés en 16/18, 18/20, 20/25 ou plus selon les essences.</p>
     
                     <div class="row">
-                        <div class="col-3 pt-4">
+                        <div class="col-lg-3 col-md-3 col-sm-6 pt-4">
                             <div class="media">
                                 <img src="{{ asset('img/a.jpg') }}" class="mr-3" alt="...">
                                 <div class="media-body">
+                                    <h5>Acer platanoides'Warrenred' 
+                                    (Erable plane)</h5>
                                 </div>
                             </div>
+                            <button type="button" class="btn btn-success mt-2">déscription</button>
                         </div>
-                        <div class="col-3 pt-4">
+                        <div class="col-lg-3 col-md-3 col-sm-6 pt-4">
                             <div class="media">
                                 <img src="{{ asset('img/b.jpg') }}" class="mr-3" alt="...">
                                 <div class="media-body">
+                                    <h5>Acer platanoides 'Crimson King' et Acer platanoides 'Drummondii' 
+                                    (Erables planes)</h5>
                                 </div>
                             </div>
+                            <button type="button" class="btn btn-success mt-2">déscription</button>
                         </div>
-                        <div class="col-3 pt-4">
+                        <div class="col-lg-3 col-md-3 col-sm-6 pt-4">
                             <div class="media">
                                 <img src="{{ asset('img/c.jpg') }}" class="mr-3" alt="...">
                                 <div class="media-body">
+                                    <h5>Celtis australis 
+                                    (Micocoulier de Provence)</h5>
                                 </div>
                             </div>
+                            <button type="button" class="btn btn-success mt-2">déscription</button>
                         </div>
-                        <div class="col-3 pt-4">
+                        <div class="col-lg-3 col-md-3 col-sm-6 pt-4">
                             <div class="media">
                                 <img src="{{ asset('img/d.jpg') }}" class="mr-3" alt="...">
                                 <div class="media-body">
+                                    <h5>Celtis occidentalis
+                                    (Micocoulier de Virginie)</h5>
                                 </div>
                             </div>
+                            <button type="button" class="btn btn-success mt-2">déscription</button>
                         </div>
     
                         <div class="col-12 text-center pt-5 ">
@@ -108,34 +121,45 @@
                                 tiges du 200/250 au 14/16.</p>
     
                             <div class="row">
-                                <div class="col-3 pt-4">
+                                <div class="col-lg-3 col-md-3 col-sm-6 pt-4">
                                     <div class="media">
                                         <img src="{{ asset('img/s.jpg') }}" class="mr-3" alt="...">
                                         <div class="media-body">
-                                            <h5 class="mt-0"></h5>
+                                            <h5>Prunus serrulata 'Kanzan'
+                                            (Cerisier à fleurs)</h5>
                                         </div>
                                     </div>
+                                    <button type="button" class="btn btn-success mt-2">déscription</button>
                                 </div>
-                                <div class="col-3 pt-4">
+                                <div class="col-lg-3 col-md-3 col-sm-6 pt-4">
                                     <div class="media">
                                         <img src="{{ asset('img/q.jpg') }}" class="mr-3" alt="...">
                                         <div class="media-body">
+                                            <h5>Liquidambar styraciflua 'Worplesdon'
+                                            (Copalme d'Amérique)</h5>
                                         </div>
                                     </div>
+                                    <button type="button" class="btn btn-success mt-2">déscription</button>
                                 </div>
-                                <div class="col-3 pt-4">
+                                <div class="col-lg-3 col-md-3 col-sm-6 pt-4">
                                     <div class="media">
                                         <img src="{{ asset('img/o.jpg') }}" class="mr-3" alt="...">
                                         <div class="media-body">
+                                            <h5>Fraxinus angustifolia 'Raywood'
+                                            (Frêne à feuilles étroites)</h5>
                                         </div>
                                     </div>
+                                    <button type="button" class="btn btn-success mt-2">déscription</button>
                                 </div>
-                                <div class="col-3 pt-4">
+                                <div class="col-lg-3 col-md-3 col-sm-6 pt-4">
                                     <div class="media">
                                         <img src="{{ asset('img/r.jpg') }}" class="mr-3" alt="...">
                                         <div class="media-body">
+                                            <h5>Liriodendron tulipifera
+                                            (Tulipier de Virginie)</h5>
                                         </div>
                                     </div>
+                                    <button type="button" class="btn btn-success mt-2">déscription</button>
                                 </div>
                             </div>
                         </div>
@@ -155,67 +179,91 @@
                     <p>La production d'arbustes contreplantés représente 250 touffes par an.</p>
     
                     <div class="row">
-                        <div class="col-3">
+                        <div class="col-lg-3 col-md-3 col-sm-6 pt-4">
                             <div class="media">
                                 <img src="{{ asset('img/a9.jpg') }}" class="mr-3" alt="...">
+                                <div class="media-body">
+                                    <h5>Cotinus coggygria 'Royal Purple'
+                                    (Arbre à perruques pourpre)</h5>
+                                </div>
                             </div>
+                            <button type="button" class="btn btn-success mt-2">déscription</button>
                         </div>
-                        <div class="col-3">
+                        <div class="col-lg-3 col-md-3 col-sm-6 pt-4">
                             <div class="media">
                                 <img src="{{ asset('img/a10.jpg') }}" class="mr-3" alt="...">
                                 <div class="media-body">
+                                    <h5>Prunus serrulata 'Kanzan'
+                                    (Cerisier à fleurs)</h5>
                                 </div>
                             </div>
+                            <button type="button" class="btn btn-success mt-2">déscription</button>
                         </div>
-                        <div class="col-3">
+                        <div class="col-lg-3 col-md-3 col-sm-6 pt-4">
                             <div class="media">
                                 <img src="{{ asset('img/a11.jpg') }}" class="mr-3" alt="...">
                                 <div class="media-body">
+                                    <h5>Viburnum burkwoodii
+                                    (Viorne burkwoodii)</h5>
                                 </div>
                             </div>
+                            <button type="button" class="btn btn-success mt-2">déscription</button>
                         </div>
-                        <div class="col-3">
+                        <div class="col-lg-3 col-md-3 col-sm-6 pt-4">
                             <div class="media">
                                 <img src="{{ asset('img/a12.jpg') }}" class="mr-3" alt="...">
                                 <div class="media-body">
+                                    <h5>Prunus lusitanica
+                                    (Laurier du Portugal)</h5>
                                 </div>
                             </div>
+                            <button type="button" class="btn btn-success mt-2">déscription</button>
                         </div>
+
                         <div class="col-12 text-center pt-5">
-    
-                            <h3>
-                                <center>Nos arbustes de première génération</center>
-                            </h3>
+                            <h3><center>Nos arbustes de première génération</center></h3>
                             <p>Nous plantons chaque année 50 000 arbustes de première génération.</p>
+
                             <div class="row">
-                                <div class="col-3 pt-4">
+                                <div class="col-lg-3 col-md-3 col-sm-6 pt-4">
                                     <div class="media">
                                         <img src="{{ asset('img/a5.jpg') }}" class="mr-3" alt="...">
                                         <div class="media-body">
-                                            <h5 class="mt-0"></h5>
+                                            <h5>Arbutus unedo
+                                            (Arbousier)</h5>
                                         </div>
                                     </div>
+                                    <button type="button" class="btn btn-success mt-2">déscription</button>
                                 </div>
-                                <div class="col-3 pt-4">
+                                <div class="col-lg-3 col-md-3 col-sm-6 pt-4">
                                     <div class="media">
                                         <img src="{{ asset('img/a6.jpg') }}" class="mr-3" alt="...">
                                         <div class="media-body">
+                                            <h5>Prunus laurocerasus 'Anbri'
+                                            (Laurier cerise ou laurier palme)</h5>
                                         </div>
                                     </div>
+                                    <button type="button" class="btn btn-success mt-2">déscription</button>
                                 </div>
-                                <div class="col-3 pt-4">
+                                <div class="col-lg-3 col-md-3 col-sm-6 pt-4">
                                     <div class="media">
                                         <img src="{{ asset('img/a7.jpg') }}" class="mr-3" alt="...">
                                         <div class="media-body">
+                                            <h5>Prunus lusitanica
+                                            (Laurier du Portugal)</h5>
                                         </div>
                                     </div>
+                                    <button type="button" class="btn btn-success mt-2">déscription</button>
                                 </div>
-                                <div class="col-3 pt-4">
+                                <div class="col-lg-3 col-md-3 col-sm-6 pt-4">
                                     <div class="media">
                                         <img src="{{ asset('img/a8.jpg') }}" class="mr-3" alt="...">
                                         <div class="media-body">
+                                            <h5>Viburnum opulus
+                                            (Viorne obier)</h5>
                                         </div>
                                     </div>
+                                    <button type="button" class="btn btn-success mt-2">déscription</button>
                                 </div>
                             </div>
                         </div>
@@ -237,33 +285,45 @@
     
     
                     <div class="row">
-                        <div class="col-3">
+                        <div class="col-lg-3 col-md-3 col-sm-6 pt-4">
                             <div class="media">
                                 <img src="{{ asset('img/c1.jpg') }}" class="mr-3" alt="...">
                                 <div class="media-body">
+                                    <h5>Picea omorika
+                                    (Epicéa de Serbie)</h5>
                                 </div>
                             </div>
+                            <button type="button" class="btn btn-success mt-2">déscription</button>
                         </div>
-                        <div class="col-3">
+                        <div class="col-lg-3 col-md-3 col-sm-6 pt-4">
                             <div class="media">
                                 <img src="{{ asset('img/c2.jpg') }}" class="mr-3" alt="...">
                                 <div class="media-body">
+                                    <h5>Larix decidua
+                                    (Mélèze)<h5>
                                 </div>
                             </div>
+                            <button type="button" class="btn btn-success mt-2">déscription</button>
                         </div>
-                        <div class="col-3">
+                        <div class="col-lg-3 col-md-3 col-sm-6 pt-4">
                             <div class="media">
                                 <img src="{{ asset('img/c3.jpg') }}" class="mr-3" alt="...">
                                 <div class="media-body">
+                                    <h5>Cedrus deodora
+                                    (Cèdre de l'Himalaya)</h5>
                                 </div>
                             </div>
+                            <button type="button" class="btn btn-success mt-2">déscription</button>
                         </div>
-                        <div class="col-3">
+                        <div class="col-lg-3 col-md-3 col-sm-6 pt-4">
                             <div class="media">
                                 <img src="{{ asset('img/c4.jpg') }}" class="mr-3" alt="...">
                                 <div class="media-body">
+                                    <h5>Cedrus libani ssp. atlantica (=Cedrus atlantica)
+                                    (Cèdre de l'Atlas)</h5>
                                 </div>
                             </div>
+                            <button type="button" class="btn btn-success mt-2">déscription</button>
                         </div>
                         <div class="col-12 text-center pt-5">
     
@@ -272,19 +332,26 @@
                             </h3>
                             <p>Chaque année nous produisons 25 000 conifères de première génération.</p>
                             <div class="row">
-                                <div class="col-6 pt-4 px-5">
+                                <div class="col-12 col-sm-6 pt-4 px-5">
                                     <div class="media">
                                         <img src="{{ asset('img/c5.jpg') }}" class="mr-3" alt="...">
                                         <div class="media-body">
+                                            <h5>Pinus nigra 'Pyramidalis' 
+                                            (=Pinus nigra 'Fastigiata')
+                                            (Pin noir pyramidal)</h5>
                                         </div>
                                     </div>
+                                    <button type="button" class="btn btn-success mt-2">déscription</button>
                                 </div>
-                                <div class="col-6 pt-4 px-5">
+                                <div class="col-12 col-sm-6 pt-4 px-5">
                                     <div class="media">
                                         <img src="{{ asset('img/c6.jpg') }}" class="mr-3" alt="...">
                                         <div class="media-body">
+                                            <h5>Pseudotsuga menziesii var. glauca
+                                            (Sapin de Douglas bleu)</h5>
                                         </div>
                                     </div>
+                                    <button type="button" class="btn btn-success mt-2">déscription</button>
                                 </div>
                             </div>
                         </div>
