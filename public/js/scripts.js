@@ -9,22 +9,34 @@
 
 jQuery(document).ready(function () {
 
-    console.log('test');
-    // var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+    // Lyon 
+    var carte = L.map('macarte').setView([45.75, 4.85], 6);
 
-    // var greenIcon = L.icon({
-    //     iconUrl: 'leaf-green.png',
-    //     shadowUrl: 'leaf-shadow.png',
+    //  Un fond de carte 
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(carte);
 
-    //     iconSize:     [38, 95], // size of the icon
-    //     shadowSize:   [50, 64], // size of the shadow
-    //     iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
-    //     shadowAnchor: [4, 62],  // the same for the shadow
-    //     popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
-    // });
+    // Marker sur Pépinières Rey et pop up
+    var marker = L.marker([45.8883, 4.721070000000054]).addTo(carte);
+    marker.bindPopup('');
+    var mapopup = marker.getPopup();
 
-    // L.marker([51.5, -0.09]).addTo(mymap)
-    //     .bindPopup('Nous sommes ici.')
-    //     .openPopup();
+    mapopup.setContent('Pépinières Rey');
+    marker.openPopup();
+
+
+
+
+
+
+
+
+
+
+
+});
+
+    
 
 
