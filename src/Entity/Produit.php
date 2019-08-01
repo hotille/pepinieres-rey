@@ -19,11 +19,6 @@ class Produit
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $categorie;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
     private $nom;
 
     /**
@@ -32,25 +27,13 @@ class Produit
     private $photo;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="string")
      */
     private $en_container;
 
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function getCategorie(): ?string
-    {
-        return $this->categorie;
-    }
-
-    public function setCategorie(string $categorie): self
-    {
-        $this->categorie = $categorie;
-
-        return $this;
     }
 
     public function getNom(): ?string
