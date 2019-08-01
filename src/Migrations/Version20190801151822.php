@@ -10,7 +10,7 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20190801072249 extends AbstractMigration
+final class Version20190801151822 extends AbstractMigration
 {
     public function getDescription() : string
     {
@@ -23,8 +23,9 @@ final class Version20190801072249 extends AbstractMigration
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
         $this->addSql('CREATE TABLE categorie (id INT AUTO_INCREMENT NOT NULL, nom VARCHAR(255) NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ENGINE = InnoDB');
-        $this->addSql('CREATE TABLE contact (id INT AUTO_INCREMENT NOT NULL, categorie TINYINT(1) NOT NULL, siret INT DEFAULT NULL, prenom VARCHAR(150) NOT NULL, nom VARCHAR(150) NOT NULL, email VARCHAR(150) NOT NULL, message LONGTEXT NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ENGINE = InnoDB');
-        $this->addSql('ALTER TABLE produit DROP categorie, CHANGE en_container en_container VARCHAR(255) NOT NULL');
+        $this->addSql('CREATE TABLE produit (id INT AUTO_INCREMENT NOT NULL, categorie_id INT NOT NULL, nom VARCHAR(255) NOT NULL, photo VARCHAR(255) DEFAULT NULL, type_de_plant VARCHAR(50) NOT NULL, nom_latin VARCHAR(100) DEFAULT NULL, description LONGTEXT NOT NULL, INDEX IDX_29A5EC27BCF5E72D (categorie_id), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ENGINE = InnoDB');
+        $this->addSql('CREATE TABLE contact (id INT AUTO_INCREMENT NOT NULL, categorie VARCHAR(255) NOT NULL, siret INT DEFAULT NULL, prenom VARCHAR(150) NOT NULL, nom VARCHAR(150) NOT NULL, email VARCHAR(150) NOT NULL, message LONGTEXT NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ENGINE = InnoDB');
+        $this->addSql('ALTER TABLE produit ADD CONSTRAINT FK_29A5EC27BCF5E72D FOREIGN KEY (categorie_id) REFERENCES categorie (id)');
     }
 
     public function down(Schema $schema) : void
@@ -32,8 +33,9 @@ final class Version20190801072249 extends AbstractMigration
         // this down() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
+        $this->addSql('ALTER TABLE produit DROP FOREIGN KEY FK_29A5EC27BCF5E72D');
         $this->addSql('DROP TABLE categorie');
+        $this->addSql('DROP TABLE produit');
         $this->addSql('DROP TABLE contact');
-        $this->addSql('ALTER TABLE produit ADD categorie VARCHAR(255) NOT NULL COLLATE utf8mb4_unicode_ci, CHANGE en_container en_container TINYINT(1) NOT NULL');
     }
 }
