@@ -1,41 +1,43 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Produit index{% endblock %}
+{% block title %}Categorie{% endblock %}
 
 {% block body %}
-    <h1>Produit index</h1>
+    <h1>{{ categorie.nom }}</h1>
 
     <table class="table">
-        <thead>
+        <tbody>
             <tr>
                 <th>Id</th>
-                <th>Categorie</th>
                 <th>Nom</th>
                 <th>Photo</th>
-                <th>En_container</th>
-                <th>actions</th>
+                <th>Type de Plant</th>
             </tr>
-        </thead>
-        <tbody>
-        {% for produit in produits %}
+{% for produit in produits %}
             <tr>
                 <td>{{ produit.id }}</td>
-                <td>{{ produit.categorie.nom }}</td>
                 <td>{{ produit.nom }}</td>
-                <td>{{ produit.photo }}</td>
+                <td><img style="height:100px; width:100px;" src="{{ asset('img/produits/' ~ produit.getPhoto()) }}"></td>
                 <td>{{ produit.typeDePlant }}</td>
                 <td>
                     <a href="{{ path('produit_show', {'id': produit.id}) }}">show</a>
                     <a href="{{ path('produit_edit', {'id': produit.id}) }}">edit</a>
                 </td>
             </tr>
-        {% else %}
+{% else %}
             <tr>
                 <td colspan="6">no records found</td>
             </tr>
-        {% endfor %}
+{% endfor %}
+
         </tbody>
     </table>
 
-    <a href="{{ path('produit_new') }}">Create new</a>
+    
+
+    <a href="{{ path('categorie_index') }}">back to list</a>
+
+    <a href="{{ path('categorie_edit', {'id': categorie.id}) }}">edit</a>
+
+    {{ include('categorie/_delete_form.html.twig') }}
 {% endblock %}
