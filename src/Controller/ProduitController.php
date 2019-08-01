@@ -54,9 +54,33 @@ class ProduitController extends AbstractController
         $produit = new Produit();
         $form = $this->createForm(ProduitType::class, $produit);
         $form->handleRequest($request);
+        
 
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager = $this->getDoctrine()->getManager();
+            //dd($request);
+            //recupérer le fichier de la requette
+
+            $file = $request->files->get('produit')['photo'];
+            //si il n'y a pas de fichier, alors la photo du produit est null.
+            if ($file === null) {
+                $produit->setPhoto($file);
+            } else {
+                
+                //On definis le chemin dans lequel le fichier ira
+                $uploads_produit_directory = $this->getParameter('uploads_produit_directory');
+                //on renomme le fichier pour éviter des doublons, et on stock le nouveau nom dans une variable
+                $filename = 'produit' . md5(uniqid()) . '.' . $file->guessExtension();
+                //move the file into the folder
+                $file->move(
+                    $uploads_produit_directory,
+                    $filename
+                );
+                //set the product's photo's attribut
+                $produit->setPhoto($filename);
+            }
+
+
             $entityManager->persist($produit);
             $entityManager->flush();
 

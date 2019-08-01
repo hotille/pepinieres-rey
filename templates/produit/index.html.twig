@@ -20,10 +20,10 @@
         {% for produit in produits %}
             <tr>
                 <td>{{ produit.id }}</td>
-                <td>{{ produit.categorie }}</td>
+                <td>{{ produit.categorie.nom }}</td>
                 <td>{{ produit.nom }}</td>
                 <td>{{ produit.photo }}</td>
-                <td>{{ produit.enContainer ? 'Yes' : 'No' }}</td>
+                <td>{{ produit.typeDePlant }}</td>
                 <td>
                     <a href="{{ path('produit_show', {'id': produit.id}) }}">show</a>
                     <a href="{{ path('produit_edit', {'id': produit.id}) }}">edit</a>
