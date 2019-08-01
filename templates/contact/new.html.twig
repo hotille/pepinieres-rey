@@ -1,0 +1,94 @@
+
+
+{# {% block title %}New Contact{% endblock %}
+
+
+
+
+{{ form_start(form) }}
+
+<div class="col-lg-6 pt-3" id="backform">
+
+    <label for="select">Choisir</label>
+    
+    <select id="pet-select" name="category">
+        <option value="">--Vous êtes un--</option>
+        <option value="professionnel">Professionnel</option>
+        <option value="particulier">Particulier</option>
+    </select>
+    
+    <div class="form-group">
+        <label for="siret-number">Numéro de Siret *</label>
+        {{ form_row(form.siret) }}
+    </div>
+
+
+
+
+    <form id="contact-form" method="post" action="contact.php" role="form">
+
+        <div class="messages"></div>
+
+        <div class="controls">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="form_name">Prénom *</label>
+                        {{ form_row(form.prenom) }}
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="form_lastname">Nom *</label>
+                        {{ form_row(form.nom)}}
+                    </div>
+                </div>  
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="form_email">Email *</label>
+                        {{ form_row(form.email)}}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="form_message">Message *</label>
+                        {{ form_row(form.message)}}
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <input type="submit" class="btn btn-send" value="Envoyer">
+                </div>
+            </div>
+        
+        </div>
+
+    </form>
+
+</div>
+
+{{ form_end(form) }}
+
+{# <h1>New Contact</h1>
+
+
+    {{ form_row(form.categorie) }}
+    {{ form_row(form.siret) }}
+    {{ form_row(form.nom) }}
+    {{ form_row(form.prenom) }}
+    {{ form_row(form.email) }}
+    {{ form_row(form.message) }}
+
+    <div>
+        <button type="submit" class="btn btn-primary">
+            Ajouter
+        </button>
+    </div> #}
+
+
+
+ #}

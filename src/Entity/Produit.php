@@ -16,6 +16,7 @@ class Produit
      */
     private $id;
 
+    
     /**
      * @ORM\Column(type="string", length=255)
      */
@@ -35,6 +36,7 @@ class Produit
     {
         return $this->id;
     }
+
 
     public function getNom(): ?string
     {

@@ -5,10 +5,13 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
+/**
+ * @Route("/environnement")
+ */
 class EnvironnementController extends AbstractController
 {
     /**
-     * @Route("/environnement", name="environnement")
+     * @Route("/", name="environnement_index")
      */
     public function index()
     {

@@ -27,6 +27,9 @@
                     <a class="nav-link" href="#">Démarche</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="#">Glossaire</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="#contact-form">Contact</a>
                 </li>
                 <li class="nav-item dropdown">
@@ -189,7 +192,7 @@
             </div>
             <div class="col-lg-6 contact-info text-center text-lg-left pb-2">
 
-                <div id="mapid"></div><br>
+            <div id="macarte"></div><br>
 
 
                 <p><span><i class="fas fa-map-marker-alt pr-2" style="font-size: 1.5em"></i></span>Pépinières Rey 2050
@@ -210,102 +213,67 @@
                     Facebook.</a>
             </div>
 
-            <!-- contact form -->
-
+            
+            
+            {{form_start(form)}}
+            
+            <form id="contact-form" method="post" action="contact.php" role="form" class="col-6">
+            
             <div class="col-lg-6 pt-3" id="backform">
+            
+            <div class="form-group">
+                {{ form_row(form.categorie) }}
+            </div>
 
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                    <label class="form-check-label" for="defaultCheck1">
-                        Vous êtes un particuler
-                    </label>
-                </div>
-                <div class="form-check pb-2">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-                    <label class="form-check-label" for="defaultCheck2">
-                        Vous êtes un professionnel
-                    </label>
-                </div>
-                <div class="form-group">
-                    <label for="siret-number">Numéro de Siret *</label>
-                    <input id="form_name" type="number" name="siret" class="form-control"
-                        placeholder="Numéro de Siret *" required="required" data-error="">
-                    <div class="help-block with-errors"></div>
-                </div>
+            <div class="form-group">
+                <label for="siret-number"></label>
+                {{ form_row(form.siret) }}
+            </div>
 
-                <form id="contact-form" method="post" action="contact.php" role="form">
-
-                    <div class="messages"></div>
-
-                    <div class="controls">
-
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="form_name">Prénom *</label>
-                                    <input id="form_name" type="text" name="name" class="form-control"
-                                        placeholder="Prénom *" required="required" data-error="">
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="form_lastname">Nom *</label>
-                                    <input id="form_lastname" type="text" name="surname" class="form-control"
-                                        placeholder="Nom *" required="required" data-error="">
-                                    <div class="help-block with-errors"></div>
-                                </div>
+            
+                <div class="controls">
+            
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                {{ form_row(form.prenom) }}
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="form_email">Email *</label>
-                                    <input id="form_email" type="email" name="email" class="form-control"
-                                        placeholder="Votre email *" required="required" data-error="">
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="form_need">Raison *</label>
-                                    <select id="form_need" name="need" class="form-control" required="required"
-                                        data-error="">
-                                        <option value="">Aide commande</option>
-                                        <option value="price">Aide prix</option>
-                                        <option value="product">Aide produit</option>
-                                        <option value="Other">Autre</option>
-                                    </select>
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label for="form_message">Message *</label>
-                                    <textarea id="form_message" name="message" class="form-control"
-                                        placeholder="Message *" rows="4" required="required"
-                                        data-error="Merci d'écrire un message"></textarea>
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <input type="submit" class="btn btn-send" value="Envoyer">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <p class="text-muted">
-
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                {{ form_row(form.nom)}}
                             </div>
                         </div>
                     </div>
-
-                </form>
-
-            </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                {{ form_row(form.email)}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                {{ form_row(form.message)}}
+                            </div>
+                        </div>
+                        
+                    </div>
+            
+                </div>
+                <button type="submit" class="btn" style="background-color: #436256">
+                    Ajouter
+                </button>
+                {{form_end(form)}}
+            
+            </form>
+            
+        </div>
         </div>
     </section>
+    <div>
+
+    </div>
 
 {% endblock %}
