@@ -23,14 +23,19 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#info">Historique</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Démarche</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Glossaire
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownAW">
+                        <a class="dropdown-item" href="http://127.0.0.1:8000/categorie/1">Arbres</a>
+                        <a class="dropdown-item" href="http://127.0.0.1:8000/categorie/2">Arbustes</a>
+                        <a class="dropdown-item" href="http://127.0.0.1:8000/categorie/3">Conifères</a>
+                    </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Glossaire</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact-form">Contact</a>
+                    <a class="nav-link" href="#contact">Contact</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -177,8 +182,6 @@
     </div>
 </section>
 
-<section id="photos" class="photos container"></section>
-
 
 <footer>
     <section id="contact" class="container px-0 pt-5">
@@ -187,19 +190,17 @@
             <!-- contact info -->
 
             <div class="col-12 col-lg-12 text-center text-lg-center my-0">
-                <img src="img/on-recrute.png" alt="on recrute" class="logorec">
                 <h2><img src="img/jardinier.png" alt="image logo" class="jrdlogo">Nous contacter</h2><br>
             </div>
             <div class="col-lg-6 contact-info text-center text-lg-left pb-2">
 
             <div id="macarte"></div><br>
 
-
                 <p><span><i class="fas fa-map-marker-alt pr-2" style="font-size: 1.5em"></i></span>Pépinières Rey 2050
                     route des Chères 69480 MORANCE</p>
                 <p><span>Horaies d'ouverture :</span><br>
                     Du lundi au samedi, 8h30-12h / 13h30-18h.</p>
-                <a class="mailto" href="mailto:contact@pepinieres-rey.com?Subject=Contact"><span><i
+                <a class="mailto" href="mailto:contact@pepinieres-rey.com?Subject=Contact" target="blank"><span><i
                             class="far fa-envelope pr-2"
                             style="font-size: 1.5em"></i></span>contact@pepinieres-rey.com</a><br>
                 <a class="tel" href="tel:+33478473528"> <span><i class="fas fa-tty pr-2"
@@ -213,20 +214,15 @@
                     Facebook.</a>
             </div>
 
-            
-            
-            {{form_start(form)}}
-            
-            <form id="contact-form" method="post" action="contact.php" role="form" class="col-6">
-            
             <div class="col-lg-6 pt-3" id="backform">
+            {{form_start(form)}}
+            <form id="contact-form" method="post" action="contact.php" role="form" class="col-6">
             
             <div class="form-group">
                 {{ form_row(form.categorie) }}
             </div>
 
             <div class="form-group">
-                <label for="siret-number"></label>
                 {{ form_row(form.siret) }}
             </div>
 
@@ -258,11 +254,10 @@
                                 {{ form_row(form.message)}}
                             </div>
                         </div>
-                        
                     </div>
             
                 </div>
-                <button type="submit" class="btn" style="background-color: #436256">
+                <button type="submit" class="btn text-white" style="background-color: #436256">
                     Ajouter
                 </button>
                 {{form_end(form)}}
@@ -272,8 +267,10 @@
         </div>
         </div>
     </section>
-    <div>
-
-    </div>
-
+</footer>
+<div class="container pt-5">
+    <hr>
+    <p class="copyright col-12 text-center">© 2019 Pépinières REY.
+        Tous droits réservés.</p>
+</div>
 {% endblock %}

@@ -4,16 +4,34 @@
 
 {% block body %}
 
-<h1>Contacts</h1>
+<h1 class="text-center pt-3 pb-3" style="color: #436256;">Contacts</h1>
 
+<table class="table text-center">
+    <thead>
+            <tr class="text-white" style="background-color: #436256;">
+                <th>Id</th>
+                <th>Catégorie</th>
+                <th>Siret</th>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Email</th>
+                <th>Message</th>
+            </tr>
+    </thead>
+
+    <tbody>
 {% for contact in contacts %}
-    <td> {{ contact.id }} </td>
-    <td> {{ contact.categorie }} </td>
-    <td> {{ contact.siret }} </td>
-    <td> {{ contact.nom }} </td>
-    <td> {{ contact.prenom }} </td>
-    <td> {{ contact.email }} </td>
-    <td> {{ contact.message }} </td>@
+    <tr style="background-color: whitesmoke;">
+        <td> {{ contact.id }} </td>
+        <td> {{ contact.categorie }} </td>
+        <td> {{ contact.siret }} </td>
+        <td> {{ contact.nom }} </td>
+        <td> {{ contact.prenom }} </td>
+        <td> {{ contact.email }} </td>
+        <td> {{ contact.message }} </td>
+    </tr>
+{% endfor %}
+    </tbody>
+</table>
 
-{% endfor %}    
 {% endblock %}

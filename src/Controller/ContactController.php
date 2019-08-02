@@ -9,6 +9,7 @@ use Symfony\Component\HttpFoundation\Response;
 use App\Entity\Contact;
 use App\Form\ContactsType;
 use App\Repository\ContactRepository;
+use Symfony\Component\Config\Definition\Exception\Exception;
 
 /**
  * @Route("/contact")
@@ -39,9 +40,10 @@ class ContactController extends AbstractController
             $em = $this->getDoctrine()->getManager();
             $em->persist($contact);
             $em->flush();
-
+            
             return $this->redirectToRoute('index');
         }
+
         return $this->render('contact/new.html.twig', [
             'contact' => $contact,
             'form' => $form->createView(),
